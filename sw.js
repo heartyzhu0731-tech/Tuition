@@ -1,5 +1,5 @@
 // 离线缓存：页面优先走网络拿最新版，断网时用缓存
-var CACHE = "tuition-v1";
+var CACHE = "tuition-v3";
 var ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./icon-maskable.png"];
 self.addEventListener("install", function(e){
   e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(ASSETS); }).then(function(){ return self.skipWaiting(); }));

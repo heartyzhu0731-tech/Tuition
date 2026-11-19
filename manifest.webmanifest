@@ -1,6 +1,6 @@
 {
-  "name": "学费计价器",
-  "short_name": "学费计价器",
+  "name": "Your Tuition Fee is Burning🔥",
+  "short_name": "Tuition🔥",
   "description": "按秒计算这学期的学费已经烧掉了多少。",
   "lang": "zh-CN",
   "start_url": "./",

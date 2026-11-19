@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>学费计价器</title>
+<title>Your Tuition Fee is Burning🔥</title>
 <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
   font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit}
 main{max-width:720px;margin:0 auto;padding:20px 16px 56px}
-h1{font-size:32px;line-height:1.15;font-weight:800;letter-spacing:-.01em;margin:8px 4px 16px}
+h1{font-size:clamp(26px,7.4vw,34px);line-height:1.15;font-weight:800;letter-spacing:-.01em;margin:8px 4px 16px}
 h2{font-size:20px;font-weight:700;margin:0}
 .num{font-variant-numeric:tabular-nums}
 .card{background:var(--card);border-radius:24px;padding:16px;margin-top:16px}
@@ -165,7 +165,12 @@ dialog[open]{animation:up .28s cubic-bezier(.2,.8,.2,1)}
 .plan[hidden]{display:none}
 .prow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;background:var(--fill);border-radius:14px;padding:8px 10px;color:var(--ink);font-size:14px}
 .prow select{font:inherit;font-size:15px;color:var(--ink);background:var(--card);border:0;border-radius:10px;padding:6px 8px}
-#cdTerm{font:inherit;font-size:15px;color:var(--ink);background:var(--fill);border:0;border-radius:10px;padding:9px 10px;width:100%;margin-bottom:8px}
+.yearform{background:var(--fill);border-radius:14px;padding:12px;margin-bottom:8px;color:var(--ink)}
+.yearform[hidden]{display:none}
+.yearform p{margin:0 0 8px;font-size:14px;color:var(--muted)}
+.yearform label{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14px;margin-bottom:8px}
+.yearform input{font:inherit;color:var(--ink);background:var(--card);border:0;border-radius:10px;padding:6px 8px}
+#cdYear,#cdTerm{font:inherit;font-size:15px;color:var(--ink);background:var(--fill);border:0;border-radius:10px;padding:9px 10px;width:100%;margin-bottom:8px}
 .prow .x{margin-left:auto;width:30px;height:30px;border:0;border-radius:50%;background:var(--card);cursor:pointer}
 .addslot{border:0;background:transparent;color:var(--accent);font-weight:600;cursor:pointer;padding:6px 2px;text-align:left}
 .past{list-style:none;margin:0;padding:0}
@@ -182,6 +187,42 @@ dialog[open]{animation:up .28s cubic-bezier(.2,.8,.2,1)}
 .cmd{display:flex;gap:8px;align-items:stretch;margin-top:6px}
 .cmd code{flex:1;min-width:0;overflow-x:auto;white-space:nowrap;background:var(--fill);border-radius:10px;padding:8px 10px;font:13px/1.5 ui-monospace,Menlo,monospace}
 .cmd button{border:0;border-radius:10px;padding:0 12px;font-weight:600;cursor:pointer;background:var(--accent);color:#fff;flex:none}
+.m-roast{margin:10px 0 0;font-size:15px;font-weight:700;line-height:1.45}
+.m-roast[hidden]{display:none}
+.bill-m{min-width:100px;text-align:center;font-weight:600;font-size:15px}
+.bill-head{background:var(--meter-idle);color:#fff;border-radius:20px;padding:16px 18px}
+.bill-head small{opacity:.75;font-size:13px}
+.bill-head b{display:block;font-size:34px;line-height:1.2;letter-spacing:-.01em;margin:2px 0 10px}
+.bill-meta{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:13px;opacity:.85}
+.sms{margin-top:12px;background:var(--fill);border-radius:18px 18px 18px 6px;padding:10px 14px;max-width:92%}
+.sms[hidden]{display:none}
+.sms-from{display:block;font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px}
+.sms p{margin:0;font-size:14px;line-height:1.55}
+.bg-h{display:flex;align-items:center;gap:10px;padding:14px 4px 6px;font-weight:700}
+.bg-h .sub{margin-left:auto;font-weight:600}
+.bg-h .cnt{color:var(--muted);font-weight:500;font-size:13px}
+.brow{display:grid;grid-template-columns:auto 1fr auto;gap:10px;padding:8px 4px 8px 28px;border-bottom:1px solid var(--sep);font-size:14px}
+.brow .w{color:var(--muted)}
+.brow .pend{color:var(--muted);font-weight:500}
+.brow b{font-weight:600}
+.inv-r{display:grid;grid-template-columns:1fr auto;align-items:end;gap:2px 12px;padding:14px 16px;background:var(--fill);border-radius:18px;margin-bottom:8px}
+.inv-r .nm{font-weight:700}
+.inv-r .sub{font-size:13px;color:var(--muted)}
+.inv-r b{font-size:24px;line-height:1.2;text-align:right}
+.inv-r .chg{text-align:right;font-size:14px;font-weight:600}
+.up{color:#D93025}.down{color:#188038}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .up{color:#F28B82}:root:not([data-theme="light"]) .down{color:#81C995}}
+:root[data-theme="dark"] .up{color:#F28B82}:root[data-theme="dark"] .down{color:#81C995}
+.inv-line{font-size:15px;margin:8px 4px 0}
+.set-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid var(--sep);flex-wrap:wrap}
+.set-row>span{font-weight:600}
+.set-row input,.set-row select{font:inherit;color:var(--ink);background:var(--fill);border:0;border-radius:10px;padding:7px 10px;max-width:160px}
+.set-row input{width:90px;text-align:center;letter-spacing:.1em}
+.seg{display:flex;background:var(--fill);border-radius:12px;padding:3px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;border-radius:9px;padding:6px 11px;font-size:14px;font-weight:600;cursor:pointer;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.14)}
+.preview{margin:10px 4px 2px;padding:10px 12px;background:var(--fill);border-radius:12px;font-size:14px}
+.preview[hidden]{display:none}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--card);
   padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s;z-index:10;max-width:90vw;text-align:center}
 .toast.show{opacity:1}
@@ -189,7 +230,7 @@ dialog[open]{animation:up .28s cubic-bezier(.2,.8,.2,1)}
 </head>
 <body>
 <main>
-  <h1>学费计价器</h1>
+  <h1>Your Tuition Fee is Burning🔥</h1>
 
   <section class="meter" id="meter" aria-live="off">
     <div class="m-top"><span class="m-name" id="mName">还没有课</span><span class="pill" id="mPill">空车</span></div>
@@ -197,6 +238,7 @@ dialog[open]{animation:up .28s cubic-bezier(.2,.8,.2,1)}
     <div class="big num"><span class="pre" id="bPre">¥</span><span class="val" id="bVal">0.0000</span><span class="post" id="bPost"></span></div>
     <div class="m-bar"><i id="mBar"></i></div>
     <p class="m-foot" id="mFoot">浙大一个学分 ¥120，按秒计价。</p>
+    <p class="m-roast" id="mRoast" hidden></p>
   </section>
 
   <section class="card" aria-labelledby="calTitle">
@@ -253,6 +295,44 @@ dialog[open]{animation:up .28s cubic-bezier(.2,.8,.2,1)}
     </details>
   </section>
 
+  <section class="card" aria-labelledby="billTitle">
+    <div class="cal-head">
+      <h2 id="billTitle">学费账单</h2>
+      <button class="round" id="billPrev" type="button" aria-label="上个月">‹</button>
+      <span class="bill-m num" id="billMonth"></span>
+      <button class="round" id="billNext" type="button" aria-label="下个月">›</button>
+    </div>
+    <div class="bill-head">
+      <small>本期账单金额</small>
+      <b class="num" id="billTotal">¥0.00</b>
+      <div class="bill-meta num" id="billMeta"></div>
+    </div>
+    <div class="sms" id="billSms" hidden><span class="sms-from">浙江大学</span><p id="billSmsText"></p></div>
+    <div id="billList"></div>
+  </section>
+
+  <section class="card" aria-labelledby="invTitle">
+    <h2 id="invTitle">如果这笔钱拿去投资</h2>
+    <p class="hint" style="margin:6px 4px 12px">把每节课烧掉的学费，当成在那一周买入指数，算到现在值多少。</p>
+    <div id="invRows"></div>
+    <p class="inv-line" id="invLine"></p>
+    <p class="hint" id="invNote" style="margin:10px 4px 0"></p>
+  </section>
+
+  <section class="card" aria-labelledby="setTitle">
+    <h2 id="setTitle">设置</h2>
+    <div class="set-row"><span>吐槽语言</span>
+      <div class="seg" id="segLang" role="group" aria-label="吐槽语言">
+        <button type="button" data-v="zh">中文</button><button type="button" data-v="yue">粤语</button><button type="button" data-v="en">English</button><button type="button" data-v="mix">混合</button><button type="button" data-v="off">关闭</button>
+      </div>
+    </div>
+    <p class="preview" id="langPreview"></p>
+    <label class="set-row"><span>学费账户尾号</span><input id="setTail" inputmode="numeric" maxlength="4" autocomplete="off"></label>
+    <label class="set-row"><span>开课前提醒</span><select id="setRemind"><option value="0">关闭</option><option value="5">提前 5 分钟</option><option value="10">提前 10 分钟</option><option value="15">提前 15 分钟</option><option value="30">提前 30 分钟</option></select></label>
+    <label class="set-row" style="border-bottom:0"><span>下课扣款短信</span><select id="setSms"><option value="1">开启</option><option value="0">关闭</option></select></label>
+    <p class="hint" style="margin:4px 4px 0">开课提醒、扣款短信和月度账单由安卓常驻通知发出。改完设置后点“复制课表”，再到 Termux 运行 tuition-sync。</p>
+  </section>
+
   <p class="foot" id="footNote">课表和记录只保存在你自己的账户里。</p>
 </main>
 
@@ -283,7 +363,14 @@ dialog[open]{animation:up .28s cubic-bezier(.2,.8,.2,1)}
     <label class="field">学分<input id="cdCredits" type="number" min="0.5" step="0.5" inputmode="decimal"></label>
     <div class="field">颜色<div class="swatches" id="cdSw" role="radiogroup" aria-label="颜色"></div></div>
     <div class="field">上课安排
-      <select id="cdTerm" aria-label="学期"></select>
+      <select id="cdYear" class="sel" aria-label="学年"></select>
+      <div class="yearform" id="yearForm" hidden>
+        <p>校历公布后，填秋学期和春学期的开课日期就行，冬、夏学期按 8 周后自动算。</p>
+        <label>秋学期开始上课<input type="date" id="yfA"></label>
+        <label>春学期开始上课<input type="date" id="yfS"></label>
+        <div class="btnrow"><button type="button" class="primary" id="yfAdd">添加学年</button><button type="button" id="yfCancel">取消</button></div>
+      </div>
+      <select id="cdTerm" class="sel" aria-label="学期"></select>
       <div class="plan" id="cdPlanBox"><div id="cdSlots" class="plan"></div><button class="addslot" id="cdAddSlot" type="button">＋ 再加一个上课时间</button></div>
     </div>
     <p class="hint" id="cdInfo" style="margin:0 0 8px"></p>
@@ -302,21 +389,39 @@ var PALETTE = ["#4285F4","#EA4335","#FBBC04","#34A853","#A142F4","#FA7B17","#12B
 var DEFAULT_PERIODS = [["08:00","08:45"],["08:50","09:35"],["10:00","10:45"],["10:50","11:35"],["11:40","12:25"],
   ["13:25","14:10"],["14:15","15:00"],["15:05","15:50"],["16:15","17:00"],["17:05","17:50"],
   ["18:50","19:35"],["19:40","20:25"],["20:30","21:15"]];
-// 校历调课：2026-12-31 学生节，2027-01-04 补 12-31 的课
-// 2026-2027 学年校历：各短学期开始上课日期，长学期 16 周
-var TERMS = {"秋":{start:"2026-09-14",weeks:8},"冬":{start:"2026-11-09",weeks:8},"秋冬":{start:"2026-09-14",weeks:16},
-  "春":{start:"2027-02-22",weeks:8},"夏":{start:"2027-04-19",weeks:8},"春夏":{start:"2027-02-22",weeks:16}};
-// 校历调课：国庆 10/6、10/7 的课分别挪到 9/20、10/10，10/17 补 10/2 的课；1/4 补 12/31 学生节的课
-var MOVE = {"2026-10-06":"2026-09-20","2026-10-07":"2026-10-10","2026-10-02":"2026-10-17","2026-12-31":"2027-01-04"};
+// 浙大校历：每个学年只需秋、春两个开学日期，冬、夏学期在 8 周后，长学期 16 周
+var BUILTIN_YEARS = {
+  "2024-2025":{autumn:"2024-09-09", spring:"2025-02-17"},
+  "2025-2026":{autumn:"2025-09-15", spring:"2026-03-02"},
+  "2026-2027":{autumn:"2026-09-14", spring:"2027-02-22"}
+};
+var TERM_KEYS = ["秋","冬","秋冬","春","夏","春夏"];
+// 校历调课（原日期 → 实际上课日期）
+var MOVE = {
+  "2024-10-04":"2024-09-29","2024-10-07":"2024-10-12",
+  "2025-10-07":"2025-09-28","2025-10-08":"2025-10-11","2025-10-24":"2025-10-18","2025-12-31":"2026-01-05",
+  "2026-10-06":"2026-09-20","2026-10-07":"2026-10-10","2026-10-02":"2026-10-17","2026-12-31":"2027-01-04"
+};
 var SHIFT = MOVE;
+function years(){
+  var all = {}, cy = (typeof state !== "undefined" && state.customYears) || {};
+  Object.keys(BUILTIN_YEARS).forEach(function(k){ all[k] = {autumn:BUILTIN_YEARS[k].autumn, spring:BUILTIN_YEARS[k].spring, custom:false}; });
+  Object.keys(cy).forEach(function(k){ if (!all[k]) all[k] = {autumn:cy[k].autumn, spring:cy[k].spring, custom:true}; });
+  var out = {}; Object.keys(all).sort().forEach(function(k){ out[k] = all[k]; }); return out;
+}
+function termInfo(year, term){
+  var Y = years()[year]; if (!Y) return null;
+  return ({"秋":{start:Y.autumn,weeks:8}, "冬":{start:addDays(Y.autumn,56),weeks:8}, "秋冬":{start:Y.autumn,weeks:16},
+    "春":{start:Y.spring,weeks:8}, "夏":{start:addDays(Y.spring,56),weeks:8}, "春夏":{start:Y.spring,weeks:16}})[term] || null;
+}
 function normPlan(p){
-  if (!p || typeof p !== "object" || !TERMS[p.term]) return null;
+  if (!p || typeof p !== "object" || TERM_KEYS.indexOf(p.term) < 0) return null;
   var sl = Array.isArray(p.slots) ? p.slots : [];
-  return {term:p.term, slots:sl.map(function(s){ var a = Math.min(13,Math.max(1,Number(s.from)||1)), b = Math.min(13,Math.max(1,Number(s.to)||a));
+  return {year: /^\d{4}-\d{4}$/.test(p.year) ? p.year : "2026-2027", term:p.term, slots:sl.map(function(s){ var a = Math.min(13,Math.max(1,Number(s.from)||1)), b = Math.min(13,Math.max(1,Number(s.to)||a));
     return {wd:Math.min(7,Math.max(1,Number(s.wd)||1)), from:Math.min(a,b), to:Math.max(a,b), par:(s.par==="odd"||s.par==="even")?s.par:"all"}; })};
 }
 
-function blank(){ return {perCredit:120, periods:DEFAULT_PERIODS.map(function(p){return p.slice();}), courses:[], slots:{}, skips:{}}; }
+function blank(){ return {perCredit:120, periods:DEFAULT_PERIODS.map(function(p){return p.slice();}), courses:[], slots:{}, skips:{}, customYears:{}, settings:{lang:"zh", tail:"5532", remind:10, sms:true}}; }
 function normalize(o){
   var b = blank(); o = o || {};
   if (Number(o.perCredit) > 0) b.perCredit = Number(o.perCredit);
@@ -326,6 +431,17 @@ function normalize(o){
     return {id:String(c.id), name:String(c.name||"未命名"), credits:Number(c.credits)>0?Number(c.credits):3, color:String(c.color||PALETTE[0]), plan:normPlan(c.plan)}; });
   if (o.slots && typeof o.slots === "object") b.slots = JSON.parse(JSON.stringify(o.slots));
   if (o.skips && typeof o.skips === "object") b.skips = JSON.parse(JSON.stringify(o.skips));
+  if (o.settings && typeof o.settings === "object"){
+    var os_ = o.settings;
+    if (["zh","yue","en","mix","off"].indexOf(os_.lang) >= 0) b.settings.lang = os_.lang;
+    if (/^\d{4}$/.test(os_.tail)) b.settings.tail = os_.tail;
+    if ([0,5,10,15,30].indexOf(Number(os_.remind)) >= 0) b.settings.remind = Number(os_.remind);
+    if (typeof os_.sms === "boolean") b.settings.sms = os_.sms;
+  }
+  if (o.customYears && typeof o.customYears === "object") Object.keys(o.customYears).forEach(function(k){
+    var y = o.customYears[k], re = /^\d{4}-\d{2}-\d{2}$/;
+    if (/^\d{4}-\d{4}$/.test(k) && y && re.test(y.autumn) && re.test(y.spring)) b.customYears[k] = {autumn:y.autumn, spring:y.spring};
+  });
   return b;
 }
 function readLocal(){ try{ var r = localStorage.getItem(KEY); return r ? normalize(JSON.parse(r)) : null; }catch(e){ return null; } }
@@ -432,7 +548,7 @@ function tick(){
     st(mName,"还没有课"); st(mSub,"点下面的“添加课程”，把课排进去。");
     st(mFoot,"浙大一个学分 ¥"+state.perCredit+"，上课时间一到就按秒烧。");
   }
-  if (slow) renderLedger(r);
+  if (slow){ renderLedger(r); renderRoast(r, now); }
 }
 
 /* ---------- calendar ---------- */
@@ -610,17 +726,19 @@ function renderLedger(r){
 var cdId = null, cdColor = null, delArm = false;
 var cdPlan = null, cdPlanOrig = "";
 var WD = ["","周一","周二","周三","周四","周五","周六","周日"], PAR = {all:"每周",odd:"单周",even:"双周"};
-function defaultTerm(){
-  var t = ds(new Date()), pick = "冬";
-  ["秋","冬","春","夏"].some(function(k){ var T = TERMS[k]; if (t < addDays(T.start, T.weeks*7)){ pick = k; return true; } return false; });
-  return pick;
+function defaultPlan(){
+  var t = ds(new Date()), Ys = years(), keys = Object.keys(Ys), pick = null;
+  keys.some(function(y){ return ["秋","冬","春","夏"].some(function(k){ var T = termInfo(y,k); if (t < addDays(T.start, T.weeks*7)){ pick = {year:y, term:k}; return true; } return false; }); });
+  return pick || {year:keys[keys.length-1], term:"秋"};
 }
 function openCourse(id){
   var c = id ? course(id) : null; cdId = id; delArm = false;
   $("cdTitle").textContent = c ? "编辑课程" : "添加课程";
   $("cdName").value = c ? c.name : ""; $("cdCredits").value = c ? c.credits : 3;
   cdColor = c ? c.color : nextColor();
-  cdPlan = c ? (c.plan ? JSON.parse(JSON.stringify(c.plan)) : {term:"", slots:[]}) : {term:defaultTerm(), slots:[{wd:1,from:1,to:2,par:"all"}]};
+  var dp = defaultPlan();
+  cdPlan = c ? (c.plan ? JSON.parse(JSON.stringify(c.plan)) : {year:dp.year, term:"", slots:[]}) : {year:dp.year, term:dp.term, slots:[{wd:1,from:1,to:2,par:"all"}]};
+  $("yearForm").hidden = true;
   cdPlanOrig = c ? JSON.stringify(c.plan||null) : "";
   $("cdDel").hidden = !c; $("cdDel").textContent = "删除课程";
   renderSw(); renderPlan(); renderCdInfo();
@@ -632,9 +750,18 @@ function renderCdInfo(){
 }
 function opt(sel, val, text, cur){ var o = document.createElement("option"); o.value = val; o.textContent = text; if (String(val)===String(cur)) o.selected = true; sel.appendChild(o); }
 function renderPlan(){
+  var ys = $("cdYear"); ys.textContent = "";
+  var Ys = years(); if (!Ys[cdPlan.year]) cdPlan.year = Object.keys(Ys).pop();
+  Object.keys(Ys).forEach(function(k){ opt(ys, k, k+" 学年"+(Ys[k].custom ? "（自己添加）" : ""), cdPlan.year); });
+  opt(ys, "__add", "＋ 添加学年…", "");
+  ys.onchange = function(){
+    if (ys.value === "__add"){ ys.value = cdPlan.year; $("yearForm").hidden = false; $("yfA").focus(); return; }
+    cdPlan.year = ys.value; renderPlan();
+  };
+  ys.hidden = !cdPlan.term;
   var ts = $("cdTerm"); ts.textContent = "";
   opt(ts, "", "不自动排，在日历里手动排", cdPlan.term);
-  Object.keys(TERMS).forEach(function(k){ var T = TERMS[k], d = pd(T.start); opt(ts, k, k+"学期（"+(d.getMonth()+1)+"月"+d.getDate()+"日起，"+T.weeks+" 周）", cdPlan.term); });
+  TERM_KEYS.forEach(function(k){ var T = termInfo(cdPlan.year, k), d = pd(T.start); opt(ts, k, k+"学期（"+d.getFullYear()+"年"+(d.getMonth()+1)+"月"+d.getDate()+"日起，"+T.weeks+" 周）", cdPlan.term); });
   ts.onchange = function(){ cdPlan.term = ts.value; if (cdPlan.term && !cdPlan.slots.length) cdPlan.slots.push({wd:1,from:1,to:2,par:"all"}); renderPlan(); };
   $("cdPlanBox").hidden = !cdPlan.term;
   var box = $("cdSlots"); box.textContent = "";
@@ -660,11 +787,23 @@ function renderPlan(){
   });
 }
 $("cdAddSlot").onclick = function(){ var last = cdPlan.slots[cdPlan.slots.length-1]; cdPlan.slots.push(last ? {wd:Math.min(7,last.wd+2), from:last.from, to:last.to, par:"all"} : {wd:1,from:1,to:2,par:"all"}); renderPlan(); };
+$("yfCancel").onclick = function(){ $("yearForm").hidden = true; };
+$("yfAdd").onclick = function(){
+  var a = $("yfA").value, sp = $("yfS").value;
+  if (!a || !sp){ toast("两个日期都要填"); return; }
+  if (sp <= a){ toast("春学期要晚于秋学期"); return; }
+  var y = Number(a.slice(0,4)), name = y+"-"+(y+1);
+  if (BUILTIN_YEARS[name]){ toast(name+" 学年已经有了"); return; }
+  state.customYears = state.customYears || {};
+  state.customYears[name] = {autumn:a, spring:sp};
+  persist(); cdPlan.year = name; $("yearForm").hidden = true; $("yfA").value = ""; $("yfS").value = "";
+  renderPlan(); toast("已添加 "+name+" 学年");
+};
 function removeBlocks(cid){
   Object.keys(state.slots).forEach(function(d){ var day = state.slots[d]; Object.keys(day).forEach(function(p){ if (day[p]===cid) delete day[p]; }); if (!Object.keys(day).length) delete state.slots[d]; });
 }
 function generate(cid, plan){
-  var T = TERMS[plan.term], n = 0, conf = 0; if (!T) return {n:0, conf:0};
+  var T = termInfo(plan.year, plan.term), n = 0, conf = 0; if (!T) return {n:0, conf:0};
   plan.slots.forEach(function(sl){
     for (var w=0; w<T.weeks; w++){
       if (sl.par==="odd" && w%2===1) continue;
@@ -695,7 +834,7 @@ $("cdSave").onclick = function(){
   if (!nm){ toast("填上课程名"); return; }
   if (!(cr>0)){ toast("学分要大于 0"); return; }
   if (cdPlan.term && !cdPlan.slots.length){ toast("至少加一个上课时间"); return; }
-  var plan = cdPlan.term ? {term:cdPlan.term, slots:cdPlan.slots.map(function(s){ return {wd:s.wd, from:Math.min(s.from,s.to), to:Math.max(s.from,s.to), par:s.par}; })} : null;
+  var plan = cdPlan.term ? {year:cdPlan.year, term:cdPlan.term, slots:cdPlan.slots.map(function(s){ return {wd:s.wd, from:Math.min(s.from,s.to), to:Math.max(s.from,s.to), par:s.par}; })} : null;
   var c;
   if (cdId){ c = course(cdId); c.name = nm; c.credits = cr; c.color = cdColor; }
   else { c = {id:newId(), name:nm, credits:cr, color:cdColor}; state.courses.push(c); }
@@ -761,7 +900,7 @@ $("importGo").onclick = function(){
   var o;
   try{ o = JSON.parse(syncText.value); }catch(e){ toast("这不是有效的课表数据"); return; }
   if (!o || !Array.isArray(o.courses) || typeof o.slots !== "object"){ toast("这不是有效的课表数据"); return; }
-  state = normalize(o); persist(); renderPeriods(); renderAll();
+  state = normalize(o); persist(); renderPeriods(); renderSettings(); renderAll();
   syncText.hidden = true; $("importRow").hidden = true;
   toast("已导入 "+state.courses.length+" 门课");
 };
@@ -781,12 +920,165 @@ if (STANDALONE){
   $("footNote").textContent = "课表只保存在这台设备的浏览器里，换设备用“复制课表”和“导入课表”搬过去。";
 }
 
+
+/* ---------- roast lines ---------- */
+var LINES = {"zh": {"pre": ["{course}还有{wait}开课，¥{amount}已经在点火了。", "再过{wait}，{course}开始烧钱。你去不去，它都烧。", "{wait}后{course}开课。这节课值{tea}杯奶茶，奶茶你舍得喝，课你舍得翘？", "温馨提示：{course}将于{wait}后扣款 ¥{amount}，本次扣款无法撤销。", "起来了吗？{course}还有{wait}，¥{amount}可不等人。", "{course}的 ¥{amount}早就交了，现在只剩一个问题：你去不去把它听回来。", "距离{course}还有{wait}。床再软，也软不过 ¥{amount}。", "你可以不去{course}，但学费不会因此退给你一分。", "{wait}后开烧：{course}，单价 ¥{amount}，概不退款。", "出门吧。{course}还有{wait}，现在走过去刚刚好。", "别刷手机了，{course}还有{wait}，¥{amount}马上开始倒数。", "今天的{course}：¥{amount}，已付款，未消费。", "翘一节{course}，等于把 ¥{amount}扔进西湖。", "{course}开课倒计时{wait}。你交的钱，比你更想去上课。", "{wait}之后，每过一分钟，{course}就从你账上划走 ¥{perMin}。", "{course}还有{wait}。去了，钱烧得值；不去，钱照样烧。", "提醒一下老板：{course}还有{wait}，¥{amount}的项目要开工了。", "{course}还有{wait}。期末的你，会感谢现在出门的你。", "这节{course}值 ¥{amount}，相当于点了一份外卖，却不打算吃。", "钱都交了还不去{course}，等于请学校吃饭。还有{wait}，自己看着办。"], "live": ["{course}正在烧，已烧 ¥{burned}，还剩 ¥{left}。", "这节{course}已经烧掉{pct}，你人在哪？", "已烧 ¥{burned}。每一秒都在扣，不管你听没听。", "{course}进行中，¥{burned}已化为灰烬。", "还剩 ¥{left}没烧完，现在进教室还能抢救一下。", "¥{burned}已经烧了，剩下的 ¥{left}，你也不要了？", "{course}烧钱进度{pct}，进度条走得比你的人快。", "这节课已经烧掉{btea}杯奶茶。", "老师在讲，学费在烧，你在干嘛？", "已扣 ¥{burned}。如果你在教室，恭喜，这笔钱花得值。", "不在教室的每一分钟，都是给学校的捐款。", "{course}已过{pct}，现在溜进去坐最后一排还来得及。", "学费燃烧中：¥{burned} / ¥{amount}。", "你刷手机的这会儿，{course}又烧了一毛钱。", "钱已经付了，课在上着，只差你本人。", "{course}正在扣费，暂不支持中途退款。", "别人在听课，你在烧钱。都是交了学费的，凭什么？", "听不听是你的事，烧不烧是时间的事。", "此刻{course}每分钟烧掉 ¥{perMin}。", "别看通知了，回去听课。"]}, "yue": {"pre": ["{course}仲有{wait}开堂，¥{amount}已经喺度点火喇。", "{wait}后开堂喇，你唔去都照烧紧钱㗎。", "呢节{course} ¥{amount}，够你饮{tea}杯奶茶，你宁愿瞓觉？", "温馨提示：{course}会喺{wait}后扣款 ¥{amount}，唔设退款。", "起身未呀？{course}仲有{wait}，¥{amount}唔会等你。", "仲有{wait}就开堂，张床再舒服都唔值 ¥{amount}。", "你可以唔去{course}，但学费一蚊都唔会退返俾你。", "{wait}后开烧：{course}，每节 ¥{amount}，冇得退。", "出门啦，{course}仲有{wait}，而家行过去啱啱好。", "咪再碌手机喇，{course}仲有{wait}。", "今日嘅{course}：¥{amount}，已经畀钱，未消费。", "翘一节{course}，等于将 ¥{amount}掟落西湖。", "{course}倒数{wait}。你交嘅钱，比你更想去上堂。", "去咗，钱烧得值；唔去，钱照烧。你自己拣。", "老细，{course}仲有{wait}，¥{amount}嘅项目要开工喇。", "期末嘅你，会多谢而家肯出门嘅你。{course}仲有{wait}。", "呢节课 ¥{amount}，好似叫咗份外卖但唔打算食。", "{wait}之后，每过一分钟，{course}都会喺你户口扣 ¥{perMin}。", "唔好话我冇提你：{course}仲有{wait}。", "钱都畀咗，唔去上堂，咪即系请学校食饭？"], "live": ["{course}烧紧，已经烧咗 ¥{burned}，仲剩 ¥{left}。", "呢节{course}已经烧咗{pct}，你人喺边？", "已经烧咗 ¥{burned}，每一秒都扣紧，唔理你有冇听。", "仲有 ¥{left}未烧晒，而家入课室仲救得返啲。", "¥{burned}已经烧咗，剩低嗰 ¥{left}，你都唔要？", "进度条行得快过你，{course}已经去到{pct}。", "呢节课已经烧咗{btea}杯奶茶。", "老师讲紧书，学费烧紧，你做紧乜？", "唔喺课室嘅每一分钟，都系捐俾学校嘅。", "{course}过咗{pct}，而家静静鸡坐后排仲赶得切。", "学费燃烧中：¥{burned} / ¥{amount}。", "你碌紧手机嗰阵，{course}又烧多咗一毫子。", "钱畀咗，堂上紧，净系差你本人。", "人哋听紧书，你烧紧钱，大家都系畀咗学费㗎喎。", "{course}扣紧费，中途唔设退款。", "听唔听系你嘅事，烧唔烧系时间嘅事。", "¥{burned}已经变咗灰，你仲谂紧去唔去？", "如果你喺课室，恭喜你，呢笔钱使得值。", "呢一刻，{course}每分钟烧紧 ¥{perMin}。", "唔好睇喇，返去上堂啦。"]}, "en": {"pre": ["{course} starts in {wait}. ¥{amount} is already on the stove.", "{course} in {wait}. Go or don't, the money burns either way.", "This {course} class costs ¥{amount}, about {tea} bubble teas. You'd skip that?", "Reminder: ¥{amount} will be charged for {course} in {wait}. No refunds.", "Up yet? {course} starts in {wait}, and ¥{amount} won't wait for you.", "Your bed is comfy. It is not ¥{amount} comfy. {course} in {wait}.", "You can skip {course}. The university will not refund a single yuan.", "Now boarding: {course}, departing in {wait}. Ticket ¥{amount}, non-refundable.", "Leave now and you'll make {course} right on time. It starts in {wait}.", "Put the phone down. {course} starts in {wait}.", "Today's {course}: ¥{amount}, paid in full, not yet used.", "Skipping {course} is like tossing ¥{amount} into West Lake.", "{course} in {wait}. Your tuition wants to go more than you do.", "Go and it's money well burned. Stay and it's just burned. {course} in {wait}.", "Boss, your ¥{amount} {course} project kicks off in {wait}.", "Future you, cramming for finals, says thanks for going to {course}.", "¥{amount} for this class. Like ordering takeout and never eating it.", "In {wait}, {course} starts billing you ¥{perMin} a minute.", "Don't say nobody warned you: {course} in {wait}.", "Already paid. Not showing up just means you're buying the university lunch."], "live": ["{course} is burning: ¥{burned} gone, ¥{left} to go.", "{pct} of this {course} class has burned. Where are you?", "¥{burned} burned and counting, whether you're listening or not.", "¥{left} still unburned. Walk in now and salvage some of it.", "¥{burned} is gone. Letting the other ¥{left} go too?", "The progress bar is moving faster than you: {course} is {pct} done.", "This class has burned {btea} bubble teas so far.", "The professor is talking, the tuition is burning. What are you doing?", "Every minute outside the classroom is a donation to the university.", "{course} is {pct} in. You can still slip into the back row.", "Tuition burning: ¥{burned} / ¥{amount}.", "While you scroll, {course} just burned another ten fen.", "Paid for. In session. Only missing: you.", "Everyone else is learning. You're just burning. Same tuition.", "{course} billing in progress. Mid-session refunds not supported.", "Listening is up to you. Burning is up to the clock.", "¥{burned} is ash. Still deciding?", "If you're in the room: congrats, this money is well spent.", "Right now {course} burns ¥{perMin} a minute.", "Stop reading this. Go to class."]}};
+var MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function pool(cat, lang){
+  lang = lang || state.settings.lang;
+  if (lang === "off") return [];
+  if (lang === "mix") return [].concat(LINES.zh[cat], LINES.yue[cat], LINES.en[cat]);
+  return (LINES[lang] || LINES.zh)[cat];
+}
+function seeded(str){
+  var h = 2166136261;
+  for (var i=0;i<str.length;i++){ h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return function(){ h = Math.imul(h ^ (h>>>15), 2246822507); h = Math.imul(h ^ (h>>>13), 3266489909); h ^= h>>>16; return (h>>>0)/4294967296; };
+}
+var orderCache = {};
+function dayOrder(cat, day){
+  var k = day+"|"+cat+"|"+state.settings.lang;
+  if (orderCache[k]) return orderCache[k];
+  var p = pool(cat).slice(), r = seeded(k);
+  for (var i=p.length-1;i>0;i--){ var j = Math.floor(r()*(i+1)), t = p[i]; p[i] = p[j]; p[j] = t; }
+  return (orderCache[k] = p);
+}
+function waitText(ms, en){
+  var m = Math.max(1, Math.ceil(ms/60000)), d = Math.floor(m/1440), h = Math.floor(m%1440/60), mi = m%60;
+  if (en) return d ? d+(d>1?" days":" day") : (h ? h+" h"+(mi?" "+mi+" min":"") : mi+" min");
+  return d ? d+" 天" : (h ? h+" 小时"+(mi?" "+mi+" 分钟":"") : mi+" 分钟");
+}
+function fillLine(line, v){
+  var en = !/[\u4e00-\u9fff]/.test(line);
+  return line.replace(/\{(\w+)\}/g, function(_, k){ return k === "wait" ? waitText(v.waitMs||0, en) : (v[k] !== undefined ? v[k] : ""); });
+}
+function lineFor(cat, day, k, v){ var o = dayOrder(cat, day); return o.length ? fillLine(o[k % o.length], v) : ""; }
+var mRoast = $("mRoast");
+function renderRoast(r, now){
+  var t = "";
+  if (state.settings.lang !== "off"){
+    if (r.current){
+      var c = r.current, s = c.s, amt = c.v*c.f, dur = (s.end-s.start)/60000, ord = (build().byDate[s.date]||[]).indexOf(s);
+      t = lineFor("live", s.date, Math.max(0,ord)*12 + Math.floor((now-s.start)/900000), {course:course(s.cid).name,
+        amount:c.v.toFixed(2), burned:amt.toFixed(2), left:(c.v-amt).toFixed(2), pct:Math.floor(c.f*100)+"%",
+        btea:(amt/TEA).toFixed(1), tea:(c.v/TEA).toFixed(1), perMin:(c.v/dur).toFixed(2)});
+    } else if (r.next){
+      var n = r.next, v = value(n), ord2 = (build().byDate[n.date]||[]).indexOf(n);
+      t = lineFor("pre", n.date, Math.max(0,ord2), {course:course(n.cid).name, amount:v.toFixed(2), tea:(v/TEA).toFixed(1),
+        perMin:(v/((n.end-n.start)/60000)).toFixed(2), waitMs:n.start-now});
+    }
+  }
+  st(mRoast, t); mRoast.hidden = !t;
+}
+
+/* ---------- bill ---------- */
+var billView = null;
+function charges(now){
+  var cum = {}, out = [];
+  build().sessions.forEach(function(s){
+    var c = course(s.cid), v = value(s);
+    cum[s.cid] = (cum[s.cid]||0) + v;
+    out.push({s:s, v:v, bal:Math.max(0, c.credits*state.perCredit - cum[s.cid]), done:now >= s.end, live:now >= s.start && now < s.end});
+  });
+  return out;
+}
+function ym(ts){ var d = new Date(ts); return d.getFullYear()+"-"+pad(d.getMonth()+1); }
+function smsText(ch){
+  var c = course(ch.s.cid), d = new Date(ch.s.end), tail = state.settings.tail, hm = pad(d.getHours())+":"+pad(d.getMinutes());
+  if (state.settings.lang === "en") return "[Zhejiang University] Your tuition account ending "+tail+" was debited CNY "+ch.v.toFixed(2)+" on "+MON[d.getMonth()]+" "+d.getDate()+" at "+hm+" for "+c.name+", periods "+ch.s.from+"–"+ch.s.to+". Balance: CNY "+ch.bal.toFixed(2)+".";
+  return "【浙江大学】您尾号"+tail+"的学费账户于"+(d.getMonth()+1)+"月"+d.getDate()+"日"+hm+"支出人民币"+ch.v.toFixed(2)+"元，用途："+c.name+(ch.s.from===ch.s.to ? "第"+ch.s.from+"节" : "第"+ch.s.from+"–"+ch.s.to+"节")+"，余额"+ch.bal.toFixed(2)+"元。";
+}
+function renderBill(){
+  var now = Date.now(), m = billView || ym(now), y = Number(m.slice(0,4)), mo = Number(m.slice(5,7));
+  $("billMonth").textContent = y+" 年 "+mo+" 月";
+  var list = charges(now).filter(function(ch){ return (ch.done || ch.live) && ym(ch.s.end) === m; });
+  var done = list.filter(function(ch){ return ch.done; }), total = done.reduce(function(a,ch){ return a+ch.v; }, 0);
+  var pend = list.filter(function(ch){ return ch.live; });
+  $("billTotal").textContent = yuan(total);
+  var last = new Date(y, mo, 0).getDate(), meta = $("billMeta"); meta.textContent = "";
+  ["账单周期 "+mo+"月1日至"+last+"日", "共 "+done.length+" 笔", "最低还款额 ¥0.00", "还款方式 按时上课"]
+    .concat(pend.length ? ["处理中 "+yuan(pend.reduce(function(a,ch){ return a+ch.v*((now-ch.s.start)/(ch.s.end-ch.s.start)); },0))] : [])
+    .forEach(function(t){ var sp = document.createElement("span"); sp.textContent = t; meta.appendChild(sp); });
+  var lastDone = done[done.length-1];
+  $("billSms").hidden = !lastDone;
+  if (lastDone){ $("billSmsText").textContent = smsText(lastDone); $("billSms").querySelector(".sms-from").textContent = state.settings.lang==="en" ? "Zhejiang University" : "浙江大学"; }
+  var box = $("billList"); box.textContent = "";
+  if (!list.length){ var e = document.createElement("p"); e.className = "hint"; e.textContent = "这个月没有扣款记录。"; box.appendChild(e); return; }
+  var groups = {};
+  list.forEach(function(ch){ (groups[ch.s.cid] = groups[ch.s.cid] || []).push(ch); });
+  Object.keys(groups).forEach(function(cid){
+    var c = course(cid), g = groups[cid], sub = g.filter(function(ch){ return ch.done; }).reduce(function(a,ch){ return a+ch.v; },0);
+    var h = document.createElement("div"); h.className = "bg-h num";
+    h.innerHTML = '<span class="dot"></span><span class="nm"></span><span class="cnt"></span><span class="sub"></span>';
+    h.querySelector(".dot").style.background = c.color; h.querySelector(".nm").textContent = c.name;
+    var nd = g.filter(function(ch){ return ch.done; }).length; h.querySelector(".cnt").textContent = nd+" 笔"+(g.length>nd ? "，1 笔处理中" : ""); h.querySelector(".sub").textContent = yuan(sub);
+    box.appendChild(h);
+    g.forEach(function(ch){
+      var d = new Date(ch.s.end), row = document.createElement("div"); row.className = "brow num";
+      var a = document.createElement("span"); a.className = "w"; a.textContent = pad(d.getMonth()+1)+"-"+pad(d.getDate())+" "+WEEK[d.getDay()]+" "+pad(d.getHours())+":"+pad(d.getMinutes());
+      var b2 = document.createElement("span"); b2.textContent = ch.s.from===ch.s.to ? "第 "+ch.s.from+" 节" : "第 "+ch.s.from+"–"+ch.s.to+" 节";
+      var c2 = document.createElement(ch.done ? "b" : "span"); c2.className = ch.done ? "" : "pend"; c2.textContent = ch.done ? yuan(ch.v) : "处理中";
+      row.appendChild(a); row.appendChild(b2); row.appendChild(c2); box.appendChild(row);
+    });
+  });
+}
+$("billPrev").onclick = function(){ var m = billView || ym(Date.now()), y = Number(m.slice(0,4)), mo = Number(m.slice(5,7))-1; if (mo < 1){ mo = 12; y--; } billView = y+"-"+pad(mo); renderBill(); };
+$("billNext").onclick = function(){ var m = billView || ym(Date.now()), y = Number(m.slice(0,4)), mo = Number(m.slice(5,7))+1; if (mo > 12){ mo = 1; y++; } billView = y+"-"+pad(mo); renderBill(); };
+
+/* ---------- invest ---------- */
+var MKT = {"asOf":"2026-11-19","csi":[["20240826",3321.43],["20240902",3231.35],["20240909",3159.25],["20240916",3201.05],["20240923",3703.69],["20240930",4017.86],["20241007",3887.17],["20241014",3925.23],["20241021",3956.42],["20241028",3890.02],["20241104",4104.05],["20241111",3968.83],["20241118",3865.7],["20241125",3916.58],["20241202",3973.14],["20241209",3933.18],["20241216",3927.74],["20241223",3981.03],["20241230",3775.17],["20250106",3732.48],["20250113",3812.34],["20250120",3832.86],["20250127",3817.08],["20250203",3892.7],["20250210",3939.01],["20250217",3978.44],["20250224",3890.05],["20250303",3944.01],["20250310",4006.56],["20250317",3914.7],["20250324",3915.17],["20250331",3861.5],["20250407",3750.52],["20250414",3772.52],["20250421",3786.99],["20250428",3770.57],["20250505",3846.16],["20250512",3889.09],["20250519",3882.27],["20250526",3840.23],["20250602",3873.98],["20250609",3864.18],["20250616",3846.64],["20250623",3921.76],["20250630",3982.2],["20250707",4014.81],["20250714",4058.55],["20250721",4127.16],["20250728",4054.93],["20250804",4104.97],["20250811",4202.35],["20250818",4378.0],["20250825",4496.76],["20250901",4460.33],["20250908",4522.0],["20250915",4501.92],["20250922",4550.05],["20250929",4640.69],["20251006",4616.83],["20251013",4514.24],["20251020",4660.68],["20251027",4640.67],["20251103",4678.79],["20251110",4628.14],["20251117",4453.61],["20251124",4526.66],["20251201",4584.54],["20251208",4580.95],["20251215",4568.18],["20251222",4657.24],["20251229",4629.94],["20260105",4758.92],["20260112",4731.87],["20260119",4702.5],["20260126",4706.34],["20260202",4643.6],["20260209",4660.41],["20260223",4710.65],["20260302",4660.44],["20260309",4669.14],["20260316",4567.02],["20260323",4502.57],["20260330",4440.79],["20260406",4636.57],["20260413",4728.67],["20260420",4769.37],["20260427",4807.31],["20260504",4871.91],["20260511",4859.59],["20260518",4845.1],["20260525",4892.12],["20260601",4816.92],["20260608",4777.32],["20260615",4941.6],["20260622",4868.22],["20260629",4842.17],["20260706",4780.79],["20260713",4529.1],["20260720",4649.19],["20260727",4588.2],["20260803",4694.44],["20260810",4665.88],["20260817",4618.9],["20260824",4609.18],["20260831",4548.05],["20260907",4510.16],["20260914",4507.39],["20260921",4439.14],["20260928",4357.62],["20261005",4317.26],["20261012",4170.61],["20261019",4105.33],["20261026",3985.5],["20261102",4054.28],["20261109",4016.29],["20261116",3984.84]],"ndx":[["20240826",19574.64],["20240902",18421.31],["20240909",19514.59],["20240916",19791.49],["20240923",20008.62],["20240930",20035.02],["20241007",20271.97],["20241014",20324.04],["20241021",20352.02],["20241028",20033.14],["20241104",21117.18],["20241111",20394.13],["20241118",20776.23],["20241125",20930.37],["20241202",21622.25],["20241209",21780.25],["20241216",21289.15],["20241223",21473.02],["20241230",21326.16],["20250106",20847.58],["20250113",21441.16],["20250120",21774.01],["20250127",21478.05],["20250203",21491.31],["20250210",22114.69],["20250217",21614.08],["20250224",20884.41],["20250303",20201.37],["20250310",19704.64],["20250317",19753.97],["20250324",19281.4],["20250331",17397.7],["20250407",18690.05],["20250414",18258.09],["20250421",19432.56],["20250428",20102.61],["20250505",20061.45],["20250512",21427.94],["20250519",20915.66],["20250526",21340.99],["20250602",21761.79],["20250609",21631.04],["20250616",21626.39],["20250623",22534.2],["20250630",22866.97],["20250707",22780.6],["20250714",23065.47],["20250721",23272.25],["20250728",22763.31],["20250804",23611.27],["20250811",23712.07],["20250818",23498.12],["20250825",23415.42],["20250901",23652.44],["20250908",24092.19],["20250915",24626.25],["20250922",24503.85],["20250929",24785.52],["20251006",24221.75],["20251013",24817.95],["20251020",25358.16],["20251027",25858.13],["20251103",25059.81],["20251110",25008.24],["20251117",24239.57],["20251124",25434.89],["20251201",25692.05],["20251208",25196.73],["20251215",25346.18],["20251222",25644.39],["20251229",25206.17],["20260105",25766.26],["20260112",25529.26],["20260119",25605.47],["20260126",25552.39],["20260202",25075.77],["20260209",24732.73],["20260216",25012.62],["20260223",24960.04],["20260302",24643.02],["20260309",24380.73],["20260316",23898.16],["20260323",23132.77],["20260330",24045.53],["20260406",25116.34],["20260413",26672.43],["20260420",27303.67],["20260427",27710.36],["20260504",29234.99],["20260511",29125.2],["20260518",29481.64],["20260525",30333.18],["20260601",28957.6],["20260608",29635.95],["20260615",30406.19],["20260622",29118.24],["20260629",29329.21],["20260706",29825.11],["20260713",28592.66],["20260720",28128.34],["20260727",28274.2],["20260803",29722.3],["20260810",30046.14],["20260817",29308.86],["20260824",29433.43],["20260831",29544.16],["20260907",29368.44],["20260914",29644.17],["20260921",30608.13],["20260928",30807.93],["20261005",30883.15],["20261012",29187.55],["20261019",28957.53],["20261026",28384.85],["20261102",26989.99],["20261109",27943.74],["20261116",27116.26]],"fx":[["20240826",7.1228],["20240902",7.113],["20240909",7.1166],["20240916",7.0963],["20240923",7.0544],["20240930",7.0124],["20241007",7.0185],["20241014",7.0849],["20241021",7.1131],["20241028",7.1269],["20241104",7.0949],["20241111",7.203],["20241118",7.2443],["20241125",7.2433],["20241202",7.2733],["20241209",7.2644],["20241216",7.2836],["20241223",7.2992],["20250102",7.2995],["20250109",7.3322],["20250116",7.3317],["20250123",7.2884],["20250130",7.2514],["20250206",7.2887],["20250213",7.2971],["20250220",7.2591],["20250227",7.2661],["20250306",7.2478],["20250313",7.2477],["20250320",7.2446],["20250327",7.2657],["20250403",7.292],["20250410",7.3215],["20250417",7.2975],["20250428",7.298],["20250506",7.2172],["20250513",7.2013],["20250520",7.2195],["20250527",7.1952],["20250603",7.1879],["20250610",7.1848],["20250617",7.1828],["20250624",7.1734],["20250701",7.1621],["20250708",7.1741],["20250715",7.173],["20250722",7.175],["20250729",7.1775],["20250805",7.1874],["20250812",7.1873],["20250819",7.1791],["20250826",7.1574],["20250902",7.1443],["20250909",7.1215],["20250916",7.1153],["20250923",7.1118],["20250930",7.1196],["20251007",7.1196],["20251014",7.14],["20251021",7.1186],["20251028",7.1014],["20251104",7.1253],["20251111",7.1185],["20251118",7.1104],["20251125",7.0855],["20251202",7.071],["20251209",7.0643],["20251216",7.0423],["20251223",7.0281],["20260102",6.9937],["20260109",6.9823],["20260116",6.9697],["20260123",6.9646],["20260130",6.9497],["20260206",6.939],["20260213",6.9086],["20260220",6.9086],["20260227",6.8582],["20260306",6.9047],["20260313",6.8966],["20260320",6.8943],["20260327",6.9138],["20260407",6.8574],["20260414",6.8158],["20260421",6.8158],["20260428",6.8388],["20260506",6.8112],["20260513",6.791],["20260520",6.8028],["20260527",6.7821],["20260603",6.7694],["20260610",6.7807],["20260617",6.7595],["20260624",6.8109],["20260701",6.7945],["20260708",6.8002],["20260715",6.7743],["20260722",6.773],["20260729",6.7663],["20260805",6.75],["20260812",6.7432],["20260819",6.7382],["20260826",6.7205],["20260902",6.7215],["20260909",6.7078],["20260916",6.7071],["20260923",6.7074],["20260930",6.7045],["20261007",6.7046],["20261014",6.6927],["20261021",6.6761],["20261028",6.6664],["20261104",6.6723],["20261111",6.6707],["20261118",6.6672]]};
+function px(series, ymd){ var lo = 0, hi = series.length-1, ans = 0; while (lo <= hi){ var mid = (lo+hi)>>1; if (series[mid][0] <= ymd){ ans = mid; lo = mid+1; } else hi = mid-1; } return series[ans][1]; }
+function invest(list){
+  var csiNow = MKT.csi[MKT.csi.length-1][1], ndxNow = MKT.ndx[MKT.ndx.length-1][1], fxNow = MKT.fx[MKT.fx.length-1][1];
+  var out = {cost:0, csi:0, ndx:0};
+  list.forEach(function(ch){
+    var d = ch.s.date.replace(/-/g,"");
+    out.cost += ch.v;
+    out.csi += ch.v * csiNow / px(MKT.csi, d);
+    out.ndx += ch.v / px(MKT.fx, d) * ndxNow / px(MKT.ndx, d) * fxNow;
+  });
+  return out;
+}
+function renderInv(){
+  var now = Date.now(), list = charges(now).filter(function(ch){ return ch.done; }), box = $("invRows"); box.textContent = "";
+  var a = MKT.asOf.split("-");
+  $("invNote").textContent = "按每周收盘价近似。纳指先按当时汇率把人民币换成美元，现值再按最新汇率换回人民币；没算分红、手续费和税。行情截至 "+a[0]+" 年 "+Number(a[1])+" 月 "+Number(a[2])+" 日，更新应用时一起更新。";
+  if (!list.length){ $("invLine").textContent = "还没有上完的课。第一节课下课后，这里开始算。"; return; }
+  var r = invest(list);
+  [["沪深300","人民币计价",r.csi],["纳斯达克100","含汇率变化",r.ndx]].forEach(function(x){
+    var g = x[2]-r.cost, pct = g/r.cost*100, row = document.createElement("div"); row.className = "inv-r num";
+    row.innerHTML = '<span class="nm"></span><b></b><span class="sub"></span><span class="chg"></span>';
+    row.querySelector(".nm").textContent = x[0]; row.querySelector("b").textContent = yuan(x[2]);
+    row.querySelector(".sub").textContent = x[1]+"，投入 "+yuan(r.cost)+"（"+list.length+" 节课）";
+    var ch = row.querySelector(".chg"); ch.className = "chg "+(g >= 0 ? "up" : "down");
+    ch.textContent = (g >= 0 ? "+" : "−")+yuan(Math.abs(g))+"（"+(g >= 0 ? "+" : "−")+Math.abs(pct).toFixed(1)+"%）";
+    box.appendChild(row);
+  });
+  var f = list[0], one = invest([f]), cur = compute(now), ref = cur.current ? cur.current.v : (cur.next ? value(cur.next) : f.v);
+  $("invLine").textContent = "第一节课（"+label(f.s.date)+"，"+course(f.s.cid).name+"）的 "+yuan(f.v)+"，买成纳指现在值 "+yuan(one.ndx)+"，买成沪深300 值 "+yuan(one.csi)+"。按年化 7% 复利粗算，一节 "+yuan(ref)+" 的课，10 年后相当于 "+yuan(ref*Math.pow(1.07,10))+"。";
+}
+
+/* ---------- settings ---------- */
+function renderSettings(){
+  Array.prototype.forEach.call($("segLang").children, function(b){ b.setAttribute("aria-pressed", b.dataset.v === state.settings.lang ? "true" : "false"); });
+  $("setTail").value = state.settings.tail; $("setRemind").value = String(state.settings.remind); $("setSms").value = state.settings.sms ? "1" : "0";
+  var p = pool("pre"), pv = $("langPreview");
+  pv.hidden = !p.length;
+  if (p.length){ var c0 = state.courses[0]; pv.textContent = "预览："+fillLine(p[Math.floor(Math.random()*p.length)], {course:c0 ? c0.name : "国际金融", amount:"45.00", tea:"2.5", perMin:"0.31", waitMs:600000}); }
+}
+Array.prototype.forEach.call($("segLang").children, function(b){
+  b.onclick = function(){ state.settings.lang = b.dataset.v; orderCache = {}; persist(); renderSettings(); lastSec = -1; tick(); renderBill(); };
+});
+$("setTail").onchange = function(){ var v = $("setTail").value.trim(); if (/^\d{4}$/.test(v)){ state.settings.tail = v; persist(); renderBill(); toast("尾号已改成 "+v); } else { $("setTail").value = state.settings.tail; toast("尾号要填 4 位数字"); } };
+$("setRemind").onchange = function(){ state.settings.remind = Number($("setRemind").value); persist(); };
+$("setSms").onchange = function(){ state.settings.sms = $("setSms").value === "1"; persist(); };
+
 /* ---------- boot ---------- */
-function renderAll(){ invalidate(); ledKey = ""; lastSec = -1; renderCal(); tick(); if (sheet.open) renderSheet(); }
-renderPeriods(); renderAll();
+function renderAll(){ invalidate(); ledKey = ""; lastSec = -1; renderCal(); tick(); renderBill(); renderInv(); if (sheet.open) renderSheet(); }
+renderPeriods(); renderSettings(); renderAll();
 var fast = !matchMedia("(prefers-reduced-motion: reduce)").matches;
 setInterval(tick, fast ? 60 : 1000);
-setInterval(function(){ renderCal(); }, 60000);
+setInterval(function(){ renderCal(); renderBill(); renderInv(); }, 60000);
 
 (async function(){
   try{
@@ -796,7 +1088,7 @@ setInterval(function(){ renderCal(); }, 60000);
     var id = await both[1].id(); if (!id) return;
     var doc = both[0].collection("data/users/"+id).doc("meter2");
     var snap = await doc.get(); dbDoc = doc;
-    if (snap.exists){ state = normalize(snap.data()); try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} renderPeriods(); renderAll(); }
+    if (snap.exists){ state = normalize(snap.data()); try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} renderPeriods(); renderSettings(); renderAll(); }
     else if (state.courses.length){ doc.set(JSON.parse(JSON.stringify(state))).catch(function(){}); }
   }catch(e){}
 })();
